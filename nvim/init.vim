@@ -24,7 +24,7 @@ nmap k gk
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'fatih/vim-go'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Lokaltog/vim-monotone'
 Plug 'jlanzarotta/bufexplorer'
 call plug#end()
