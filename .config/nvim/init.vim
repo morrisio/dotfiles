@@ -1,15 +1,24 @@
-" Basics
+" Each tab is 4 columns wide
 set tabstop=4
+" Indentation depth is 4 columns
 set shiftwidth=4
+" Tabs are expanded to spaces
 set expandtab
+" Line numbers are displayed
 set number
+" Show last command at the bottom of the window
 set showcmd
-set cursorline
-set hidden
+" Command-line is 2 lines high
 set cmdheight=2
+" Highlight the line the cursor is on
+set cursorline
+" Abandoned buffers are hidden rather than deleted
+set hidden
+" Always show the sign column (used for breakpoints, linter symbols, etc)
 set signcolumn=yes
-
+" Update search results after each character
 set incsearch
+" Highlight search matches
 set hlsearch
 
 let mapleader=","
@@ -25,12 +34,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'fatih/vim-go'
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'Lokaltog/vim-monotone'
-Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
-" Must be called after vim-plug (it provides schemes)
-colo monotone
 
 " coc config
 inoremap <silent><expr> <c-space> coc#refresh()
