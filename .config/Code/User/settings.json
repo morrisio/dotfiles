@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "White",
+    "vscode-neovim.neovimPath": "/usr/bin/nvim",
+    "workbench.tree.indent": 24,
+    "go.formatTool": "goimports",
+    "editor.fontFamily": "'Noto Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+}
