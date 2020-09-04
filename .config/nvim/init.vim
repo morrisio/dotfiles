@@ -12,13 +12,17 @@ set hlsearch            " Highlight search matches
 
 let mapleader=","
 
+"set background=light
+
 " Key remaps
 imap fd <Esc>
 nmap j gj
 nmap k gk
+tnoremap fd <C-\><C-n>
 
 if !exists('g:vscode')
-    source plugins.vim
-    source coc.vim
+    source $HOME/.config/nvim/plugins.vim
+    source $HOME/.config/nvim/coc.vim
 endif
 
+colorscheme bow-wob
