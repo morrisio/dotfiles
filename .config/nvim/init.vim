@@ -9,10 +9,12 @@ set hidden              " Abandoned buffers are hidden rather than deleted
 set signcolumn=yes      " Always show the sign column (used for breakpoints, linter symbols, etc)
 set incsearch           " Update search results after each character
 set hlsearch            " Highlight search matches
+set splitbelow          " Open splits below rather than above current window
+set relativenumber      " Display relative line numbers
 
 let mapleader=","
 
-"set background=light
+set background=light
 
 " Key remaps
 imap fd <Esc>
@@ -23,6 +25,10 @@ tnoremap fd <C-\><C-n>
 if !exists('g:vscode')
     source $HOME/.config/nvim/plugins.vim
     source $HOME/.config/nvim/coc.vim
+endif
+
+if has('termguicolors')
+  set termguicolors
 endif
 
 colorscheme bow-wob
