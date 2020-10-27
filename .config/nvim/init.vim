@@ -11,6 +11,7 @@ set incsearch           " Update search results after each character
 set hlsearch            " Highlight search matches
 set splitbelow          " Open splits below rather than above current window
 set relativenumber      " Display relative line numbers
+set completeopt=menuone,preview,longest "Make the complete menu behave like VS
 
 let mapleader=","
 
