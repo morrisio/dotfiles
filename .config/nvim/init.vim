@@ -15,21 +15,24 @@ set completeopt=menuone,preview,longest "Make the complete menu behave like VS
 
 let mapleader=","
 
-set background=light
+"set background=light
 
 " Key remaps
 imap fd <Esc>
 nmap j gj
 nmap k gk
 tnoremap fd <C-\><C-n>
-
-if !exists('g:vscode')
-    source $HOME/.config/nvim/plugins.vim
-    source $HOME/.config/nvim/coc.vim
-endif
+map <Leader>y "+y
+map <Leader>p "+p
 
 if has('termguicolors')
   set termguicolors
 endif
 
+source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/coc.vim
+
 colorscheme bow-wob
+
+autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
+command Term 15sp | terminal
