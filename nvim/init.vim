@@ -32,7 +32,7 @@ endif
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/coc.vim
 
-colorscheme bow-wob
+colorscheme warlock
 
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
 command Term 15sp | terminal
