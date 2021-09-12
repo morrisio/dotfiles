@@ -24,6 +24,24 @@ nmap k gk
 tnoremap fd <C-\><C-n>
 map <Leader>y "+y
 map <Leader>p "+p
+nnoremap Y y$
+
+" Keep cursor in the center when going to next/prev
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Undo on more characters
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+
 
 if has('termguicolors')
   set termguicolors
