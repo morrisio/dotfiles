@@ -13,7 +13,7 @@ set splitbelow          " Open splits below rather than above current window
 set relativenumber      " Display relative line numbers
 set completeopt=menuone,preview,longest "Make the complete menu behave like VS
 
-let mapleader=","
+let mapleader=" "
 
 "set background=light
 
@@ -50,7 +50,7 @@ endif
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/coc.vim
 
-colorscheme warlock
+colorscheme gruvbox
 
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
 command Term 15sp | terminal

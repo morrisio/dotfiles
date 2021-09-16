@@ -7,8 +7,11 @@ Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
+
+Plug 'morhetz/gruvbox'
 Plug 'hardselius/warlock'
 Plug 'karoliskoncevicius/distilled-vim'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 call plug#end()
