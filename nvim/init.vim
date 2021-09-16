@@ -16,7 +16,7 @@ set wrap                " Softwrap text
 set textwidth=120       " Wrap text at the 120th column WHEN FORMATTING
 set linebreak           " Softwra[] lines at word boundaries
 
-let mapleader=","
+let mapleader=" "
 
 "set background=light
 
@@ -27,6 +27,24 @@ nmap k gk
 tnoremap fd <C-\><C-n>
 map <Leader>y "+y
 map <Leader>p "+p
+nnoremap Y y$
+
+" Keep cursor in the center when going to next/prev
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Undo on more characters
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+
 
 if has('termguicolors')
   set termguicolors
@@ -35,7 +53,7 @@ endif
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/coc.vim
 
-colorscheme warlock
+colorscheme gruvbox
 
 " Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
