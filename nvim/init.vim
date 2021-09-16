@@ -12,6 +12,9 @@ set hlsearch            " Highlight search matches
 set splitbelow          " Open splits below rather than above current window
 set relativenumber      " Display relative line numbers
 set completeopt=menuone,preview,longest "Make the complete menu behave like VS
+set wrap                " Softwrap text
+set textwidth=120       " Wrap text at the 120th column WHEN FORMATTING
+set linebreak           " Softwra[] lines at word boundaries
 
 let mapleader=","
 
@@ -34,5 +37,6 @@ source $HOME/.config/nvim/coc.vim
 
 colorscheme warlock
 
+" Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
 command Term 15sp | terminal
