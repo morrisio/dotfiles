@@ -6,6 +6,7 @@ Plug 'fatih/vim-go'
 " Make sure yarn is installed before installing coc.nvim
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'hardselius/warlock'
 Plug 'karoliskoncevicius/distilled-vim'
