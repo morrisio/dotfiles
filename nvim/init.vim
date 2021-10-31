@@ -13,8 +13,7 @@ set splitbelow          " Open splits below rather than above current window
 set relativenumber      " Display relative line numbers
 set completeopt=menuone,preview,longest "Make the complete menu behave like VS
 set wrap                " Softwrap text
-set textwidth=120       " Wrap text at the 120th column WHEN FORMATTING
-set linebreak           " Softwra[] lines at word boundaries
+set linebreak           " Softwrap lines at word boundaries
 
 let mapleader=" "
 
@@ -42,9 +41,18 @@ inoremap ? ?<c-g>u
 " Move lines
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <leader>k :m .-2<CR>==
-nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>K :m .-2<CR>==
+nnoremap <leader>J :m .+1<CR>==
 
+" Easier split navigation
+nnoremap <leader>j <c-w><c-j>
+nnoremap <leader>k <c-w><c-k>
+nnoremap <leader>h <c-w><c-h>
+nnoremap <leader>l <c-w><c-l>
+
+" FZF
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>F :Ag<CR>
 
 if has('termguicolors')
   set termguicolors
@@ -53,7 +61,7 @@ endif
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/coc.vim
 
-colorscheme gruvbox
+colorscheme onedark
 
 " Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
