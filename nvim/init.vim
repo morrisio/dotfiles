@@ -51,6 +51,7 @@ nnoremap <leader>h <c-w><c-h>
 nnoremap <leader>l <c-w><c-l>
 
 " File finding
+nnoremap <C-N> :NERDTree<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<CR>
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
