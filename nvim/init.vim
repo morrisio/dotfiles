@@ -61,7 +61,6 @@ if has('termguicolors')
 endif
 
 source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/coc.vim
 
 colorscheme onedark
 
