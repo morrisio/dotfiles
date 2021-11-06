@@ -50,9 +50,11 @@ nnoremap <leader>k <c-w><c-k>
 nnoremap <leader>h <c-w><c-h>
 nnoremap <leader>l <c-w><c-l>
 
-" FZF
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>F :Ag<CR>
+" File finding
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 
 if has('termguicolors')
   set termguicolors

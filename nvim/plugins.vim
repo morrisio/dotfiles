@@ -17,6 +17,8 @@ Plug 'savq/melange'
 Plug 'joshdick/onedark.vim'
 Plug 'karoliskoncevicius/distilled-vim'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'BurntSushi/ripgrep'
 call plug#end()
