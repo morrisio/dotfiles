@@ -14,10 +14,11 @@ set relativenumber      " Display relative line numbers
 set completeopt=menuone,preview,longest "Make the complete menu behave like VS
 set wrap                " Softwrap text
 set linebreak           " Softwrap lines at word boundaries
+set updatetime=500      " Time in ms to wait until buffer is cached (and some plugins triggered)
 
 let mapleader=" "
 
-"set background=light
+set background=dark
 
 " Key remaps
 imap fd <Esc>
@@ -63,7 +64,7 @@ endif
 
 source $HOME/.config/nvim/plugins.vim
 
-colorscheme onedark
+colorscheme melange
 
 " Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber

@@ -13,9 +13,10 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'morhetz/gruvbox'
+Plug 'morrisio/vim-bow-wob'
+Plug 'logico/typewriter'
 Plug 'savq/melange'
-Plug 'joshdick/onedark.vim'
-Plug 'karoliskoncevicius/distilled-vim'
+Plug 'romgrk/doom-one.vim'
 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
