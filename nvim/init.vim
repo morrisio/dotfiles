@@ -1,7 +1,13 @@
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
 set tabstop=4           " Each tab is 4 columns wide
 set shiftwidth=4        " Indentation depth is 4 columns
 set expandtab           " Tabs are expanded to spaces
 set number              " Line numbers are displayed
+set relativenumber      " Display relative line numbers
 set showcmd             " Show last command at the bottom of the window
 set cmdheight=2         " Command-line is 2 lines high
 set cursorline          " Highlight the line the cursor is on
@@ -10,23 +16,23 @@ set signcolumn=yes      " Always show the sign column (used for breakpoints, lin
 set incsearch           " Update search results after each character
 set hlsearch            " Highlight search matches
 set splitbelow          " Open splits below rather than above current window
-set relativenumber      " Display relative line numbers
 set completeopt=menuone,preview,longest "Make the complete menu behave like VS
 set wrap                " Softwrap text
 set linebreak           " Softwrap lines at word boundaries
 set updatetime=500      " Time in ms to wait until buffer is cached (and some plugins triggered)
+set wildmenu            " Enhanced command-line completion
 
 let mapleader=" "
 
-set background=dark
+set background=light
 
 " Key remaps
 imap fd <Esc>
 nmap j gj
 nmap k gk
 tnoremap fd <C-\><C-n>
-map <Leader>y "+y
-map <Leader>p "+p
+map <Leader>y "*y
+map <Leader>p "*p
 nnoremap Y y$
 
 " Keep cursor in the center when going to next/prev
@@ -64,7 +70,7 @@ endif
 
 source $HOME/.config/nvim/plugins.vim
 
-colorscheme melange
+colorscheme bow-wob
 
 " Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
