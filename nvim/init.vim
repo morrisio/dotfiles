@@ -24,7 +24,7 @@ set wildmenu            " Enhanced command-line completion
 
 let mapleader=" "
 
-set background=light
+set background=dark
 
 " Key remaps
 imap fd <Esc>
@@ -70,7 +70,7 @@ endif
 
 source $HOME/.config/nvim/plugins.vim
 
-colorscheme bow-wob
+colorscheme melange
 
 " Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber
