@@ -1,9 +1,6 @@
 " neoclide/coc.nvim config
 inoremap <silent><expr> <c-space> coc#refresh()
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -31,19 +28,17 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Use tab for trigger completion with characters ahead and navigate.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Formatting
+nmap <leader>f <Plug>(coc-format)
+vmap <leader>f <Plug>(coc-format)
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" Diagnostics
+nmap <silent> g] <Plug>(coc-diagnostic-prev)
+nmap <silent> g[ <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>ca :<C-u>CocList diagnostics<cr>
 
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" Other commands
+nmap <silent> <leader>cc :<C-u>CocList commands<cr>
+nmap <silent> <leader>co :<C-u>CocList outline<cr>
+nmap <silent> <leader>cs :<C-u>CocList symbols<cr>
+
