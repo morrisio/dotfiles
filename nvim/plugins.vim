@@ -11,12 +11,13 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'chaoren/vim-wordmotion'
 
 Plug 'morhetz/gruvbox'
-Plug 'morrisio/vim-bow-wob'
-Plug 'logico/typewriter'
+Plug 'cocopon/iceberg.vim'
 Plug 'savq/melange'
-Plug 'romgrk/doom-one.vim'
+Plug 'jsit/toast.vim'
+Plug 'therubymug/vim-pyte'
 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
