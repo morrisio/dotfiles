@@ -24,7 +24,7 @@ set wildmenu            " Enhanced command-line completion
 
 let mapleader=" "
 
-set background=dark
+set background=light
 
 " Key remaps
 imap fd <Esc>
@@ -58,11 +58,12 @@ nnoremap <leader>h <c-w><c-h>
 nnoremap <leader>l <c-w><c-l>
 
 " File finding
-nnoremap <C-N> :NERDTree<CR>
+nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<CR>
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fh <cmd>Telescope help_tags<CR>
+nnoremap <leader>ft :NERDTreeFind<CR>
 
 if has('termguicolors')
   set termguicolors
@@ -70,7 +71,7 @@ endif
 
 source $HOME/.config/nvim/plugins.vim
 
-colorscheme melange
+colorscheme pencil
 
 " Opening a terminal
 autocmd TermOpen * startinsert | setlocal nonumber norelativenumber

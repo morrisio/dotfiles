@@ -14,10 +14,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'chaoren/vim-wordmotion'
 
 Plug 'morhetz/gruvbox'
-Plug 'cocopon/iceberg.vim'
-Plug 'savq/melange'
-Plug 'jsit/toast.vim'
 Plug 'therubymug/vim-pyte'
+Plug 'KKPMW/distilled-vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'owickstrom/vim-colors-paramount'
+Plug 'sainnhe/edge'
+Plug 'axvr/photon.vim'
+Plug 'vyshane/cleanroom-vim-color'
+Plug 'logico/typewriter'
 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
