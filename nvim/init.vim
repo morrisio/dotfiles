@@ -22,7 +22,7 @@ set linebreak           " Softwrap lines at word boundaries
 set updatetime=500      " Time in ms to wait until buffer is cached (and some plugins triggered)
 set wildmenu            " Enhanced command-line completion
 
-let mapleader=" "
+"let mapleader=" "
 
 set background=light
 
@@ -31,8 +31,11 @@ imap fd <Esc>
 nmap j gj
 nmap k gk
 tnoremap fd <C-\><C-n>
-map <Leader>y "*y
-map <Leader>p "*p
+
+" Clipboard
+set clipboard=unnamedplus " Use system clipboard by default
+map <Leader>y "+y
+map <Leader>p "+p
 nnoremap Y y$
 
 " Keep cursor in the center when going to next/prev
@@ -64,6 +67,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 nnoremap <leader>ft :NERDTreeFind<CR>
+
+" NERDTree should show hidden files by default
+let NERDTreeShowHidden=1
 
 if has('termguicolors')
   set termguicolors
