@@ -1,0 +1,7 @@
+require "morrisio.options"
+require "morrisio.keymaps"
+require "morrisio.plugins"
+require "morrisio.colorscheme"
+require "morrisio.treesitter"
+require "morrisio.cmp"
+require "morrisio.term"
