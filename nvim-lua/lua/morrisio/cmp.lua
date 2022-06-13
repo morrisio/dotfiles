@@ -48,18 +48,19 @@ local function config(_config)
 		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 		on_attach = function()
 			vim.api.nvim_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>",  {noremap = true})
+			vim.api.nvim_set_keymap("n", "gi", ":lua vim.lsp.buf.implementation()<CR>",  {noremap = true})
+			vim.api.nvim_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>",  {noremap = true})
-			vim.api.nvim_set_keymap("n", "<leader>vws", ":lua vim.lsp.buf.workspace_symbol()<CR>",  {noremap = true})
-			vim.api.nvim_set_keymap("n", "<leader>vd", ":lua vim.diagnostic.open_float()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("n", "g[", ":lua vim.lsp.diagnostic.goto_next()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("n", "g]", ":lua vim.lsp.diagnostic.goto_prev()<CR>",  {noremap = true})
-			vim.api.nvim_set_keymap("n", "<leader>vca", ":lua vim.lsp.buf.code_action()<CR>",  {noremap = true})
-			vim.api.nvim_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>",  {noremap = true})
-			vim.api.nvim_set_keymap("n", "<leader>vrn", ":lua vim.lsp.buf.rename()<CR>",  {noremap = true})
-			vim.api.nvim_set_keymap("i", "<C-h>", "<cmd>lua vim.lsp.buf.signature_help()<CR>",  {noremap = true})
+			vim.api.nvim_set_keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>",  {noremap = true})
+			vim.api.nvim_set_keymap("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>",  {noremap = true})
 		end,
 	}, _config or {})
 end
+
+-- Format on save
+vim.api.nvim_command('autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()')
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
