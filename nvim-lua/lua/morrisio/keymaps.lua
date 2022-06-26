@@ -24,10 +24,10 @@ vim.api.nvim_set_keymap(normal, "n", "nzzzv", opts)
 vim.api.nvim_set_keymap(normal, "N", "Nzzzv", opts)
 
 -- Undo on more characters
-vim.api.nvim_set_keymap(normal, ",", ",<c-g>u", opts)
-vim.api.nvim_set_keymap(normal, ".", ".<c-g>u", opts)
-vim.api.nvim_set_keymap(normal, "!", "!<c-g>u", opts)
-vim.api.nvim_set_keymap(normal, "?", "?<c-g>u", opts)
+vim.api.nvim_set_keymap(insert, ",", ",<c-g>u", opts)
+vim.api.nvim_set_keymap(insert, ".", ".<c-g>u", opts)
+vim.api.nvim_set_keymap(insert, "!", "!<c-g>u", opts)
+vim.api.nvim_set_keymap(insert, "?", "?<c-g>u", opts)
 
 -- File finding
 vim.api.nvim_set_keymap(normal, "<c-n>", ":NERDTreeToggle<CR>", opts)
