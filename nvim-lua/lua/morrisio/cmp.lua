@@ -53,6 +53,7 @@ local function config(_config)
 			vim.api.nvim_set_keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("n", "g[", ":lua vim.lsp.diagnostic.goto_next()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("n", "g]", ":lua vim.lsp.diagnostic.goto_prev()<CR>",  {noremap = true})
+			vim.api.nvim_set_keymap("n", "<leader>fx", ":lua vim.lsp.buf.code_action()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>",  {noremap = true})
 			vim.api.nvim_set_keymap("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>",  {noremap = true})
 		end,
@@ -74,6 +75,7 @@ require("lspconfig").gopls.setup(config({
                 unusedparams = true,
             },
             staticcheck = true,
+            buildFlags = {"-tags=integration"},
         },
     },
 }))
@@ -104,3 +106,6 @@ local rust_opts = {
 }
 
 require('rust-tools').setup(rust_opts)
+
+-- Python
+require("lspconfig").pyright.setup{}
