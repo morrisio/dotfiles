@@ -6,11 +6,13 @@ return require('packer').startup(function()
 	use 'scrooloose/nerdtree'
 	use 'rstacruz/vim-closer'
 	use 'tpope/vim-fugitive'
+	use 'tpope/vim-surround'
+	use 'preservim/vim-pencil'
 
     -- Color schemes
 	use 'morhetz/gruvbox'
 	use 'KKPMW/distilled-vim'
-	use 'reedes/vim-colors-pencil'
+	use 'preservim/vim-colors-pencil'
 
     -- Navigators
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -30,8 +32,8 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
 
-    -- Rust
-    use 'simrat39/rust-tools.nvim'
+    -- Golang
+    use 'fatih/vim-go'
 
 
 end)
