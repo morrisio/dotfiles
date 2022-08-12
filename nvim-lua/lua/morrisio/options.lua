@@ -20,6 +20,7 @@ local options = {
     shiftwidth = 4,             -- Indentation is 4 spaces deep
     showcmd = true,             -- Show command at the bottom
     signcolumn = "yes",		    -- Always show the sign column (for breakpoints, linters)
+    ignorecase = true,		    -- Ignore case when searching by default (but see below)
     smartcase = true,		    -- Switch to case sensitive if search patter contains uppercase chars
     splitbelow = true,		    -- Open splits below
     splitright = true,		    -- Open splits to the right
