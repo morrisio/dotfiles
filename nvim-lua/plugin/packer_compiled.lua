@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/morris/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/morris/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/morris/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -178,11 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/morris/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
-  },
-  ["vim-pencil"] = {
-    loaded = true,
-    path = "/Users/morris/.local/share/nvim/site/pack/packer/start/vim-pencil",
-    url = "https://github.com/preservim/vim-pencil"
   },
   ["vim-surround"] = {
     loaded = true,

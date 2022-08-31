@@ -6,8 +6,7 @@ return require('packer').startup(function()
 	use 'scrooloose/nerdtree'
 	use 'rstacruz/vim-closer'
 	use 'tpope/vim-fugitive'
-	use 'tpope/vim-surround'
-	use 'preservim/vim-pencil'
+    use 'tpope/vim-surround'
 
     -- Color schemes
 	use 'morhetz/gruvbox'
@@ -24,8 +23,8 @@ return require('packer').startup(function()
 
     -- LSP/completion
     use 'neovim/nvim-lspconfig'
+    use 'williamboman/nvim-lsp-installer'
     use 'L3MON4D3/LuaSnip'
-    use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -34,6 +33,4 @@ return require('packer').startup(function()
 
     -- Golang
     use 'fatih/vim-go'
-
-
 end)
