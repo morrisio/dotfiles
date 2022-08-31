@@ -1,2 +1,2 @@
-vim.opt.background = "light"
-vim.cmd 'colorscheme pencil'
+vim.opt.background = "dark"
+vim.cmd 'colorscheme gruvbox'
