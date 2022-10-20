@@ -4,9 +4,10 @@ return require('packer').startup(function()
     -- Basics
 	use 'vim-airline/vim-airline'
 	use 'scrooloose/nerdtree'
-	use 'rstacruz/vim-closer'
+	use 'jiangmiao/auto-pairs'
 	use 'tpope/vim-fugitive'
     use 'tpope/vim-surround'
+	use 'preservim/vim-pencil'
 
     -- Color schemes
 	use 'morhetz/gruvbox'
@@ -34,4 +35,7 @@ return require('packer').startup(function()
 
     -- Golang
     use 'fatih/vim-go'
+
+    -- Rust
+    use 'simrat39/rust-tools.nvim'
 end)
