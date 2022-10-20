@@ -12,6 +12,7 @@ return require('packer').startup(function()
 	use 'morhetz/gruvbox'
 	use 'KKPMW/distilled-vim'
 	use 'preservim/vim-colors-pencil'
+	use 'rainglow/vim'
 
     -- Navigators
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
