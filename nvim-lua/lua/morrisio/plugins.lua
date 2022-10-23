@@ -22,6 +22,7 @@ return require('packer').startup(function()
 	use 'BurntSushi/ripgrep'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'nvim-treesitter/playground'
+    use {'ggandor/leap.nvim'}
 
     -- LSP/completion
     use 'neovim/nvim-lspconfig'
