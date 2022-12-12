@@ -15,6 +15,7 @@ return require('packer').startup(function()
 	use 'preservim/vim-colors-pencil'
 	use 'rainglow/vim'
     use 'arcticicestudio/nord-vim'
+    use 'rafi/awesome-vim-colorschemes'
 
     -- Navigators
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -34,6 +35,8 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cpm-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-nvim-lsp-document-symbol'
 
     -- Golang
     use 'fatih/vim-go'
