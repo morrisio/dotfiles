@@ -1,6 +1,6 @@
 require "morrisio.options"
 require "morrisio.keymaps"
-require "morrisio.plugins"
+require "morrisio.packer"
 require "morrisio.colorscheme"
 require "morrisio.treesitter"
 require "morrisio.cmp"
