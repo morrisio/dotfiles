@@ -15,6 +15,14 @@ return require('packer').startup(function()
 	use 'KKPMW/distilled-vim'
 	use 'preservim/vim-colors-pencil'
 	use 'arcticicestudio/nord-vim'
+	use 'arcticicestudio/nord-vim'
+	use({
+		'rose-pine/neovim',
+		as = 'rose-pine',
+		config = function()
+			vim.cmd('colorscheme rose-pine')
+		end
+	})
 
 	-- Navigators
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
