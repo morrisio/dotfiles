@@ -1,3 +1,5 @@
+vim.cmd('colorscheme glowfish')
+
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
 	cmdheight = 2,			-- Higher command line

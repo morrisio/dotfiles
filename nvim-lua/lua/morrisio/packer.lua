@@ -4,25 +4,18 @@ return require('packer').startup(function()
     -- Basics
     use 'vim-airline/vim-airline'
     use 'scrooloose/nerdtree'
-    use 'jiangmiao/auto-pairs'
     use 'tpope/vim-fugitive'
-    use 'tpope/vim-surround'
     use 'preservim/vim-pencil'
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
     -- Color schemes
     use 'morhetz/gruvbox'
     use 'ajmwagar/vim-deus'
-    use 'KKPMW/distilled-vim'
     use 'preservim/vim-colors-pencil'
-    use 'arcticicestudio/nord-vim'
-    use 'arcticicestudio/nord-vim'
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+    use 'rainglow/vim'
 
     -- Navigators
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
