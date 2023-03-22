@@ -15,6 +15,12 @@ vim.keymap.set("n", "<leader>k", "<c-w><c-k>", {})
 vim.keymap.set("n", "<leader>h", "<c-w><c-h>", {})
 vim.keymap.set("n", "<leader>l", "<c-w><c-l>", {})
 
+vim.keymap.set("n", "<leader><s-j>", "<c-w>J", {})
+vim.keymap.set("n", "<leader><s-k>", "<c-w>K", {})
+vim.keymap.set("n", "<leader><s-h>", "<c-w>H", {})
+vim.keymap.set("n", "<leader><s-l>", "<c-w>L", {})
+
+
 -- Move visual selection up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
