@@ -2,20 +2,26 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- Basics
-    use 'vim-airline/vim-airline'
     use 'scrooloose/nerdtree'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     use 'tpope/vim-fugitive'
     use 'preservim/vim-pencil'
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+    use 'kyazdani42/nvim-web-devicons'
 
     -- Color schemes
     use 'morhetz/gruvbox'
     use 'ajmwagar/vim-deus'
     use 'preservim/vim-colors-pencil'
-    use 'rainglow/vim'
+    use 'chriskempson/base16-vim'
+    use 'pgdouyon/vim-yin-yang'
+    use 'cideM/yui'
 
     -- Navigators
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -45,6 +51,7 @@ return require('packer').startup(function()
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'},
             {'saadparwaiz1/cmp_luasnip'},
+            {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'},
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},
@@ -52,9 +59,12 @@ return require('packer').startup(function()
         }
     }
 
-        -- Golang
-        use 'fatih/vim-go'
+    -- Tabnine
+    -- use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+    --
+    -- Golang
+    use 'fatih/vim-go'
 
-        -- Rust
-        use 'simrat39/rust-tools.nvim'
+    -- Rust
+    use 'simrat39/rust-tools.nvim'
     end)

@@ -1,4 +1,4 @@
-vim.cmd('colorscheme glowfish')
+vim.cmd('colorscheme deus')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
@@ -19,7 +19,7 @@ hidden = true,			    	-- Abandoned buffers are hidden rather than deleted
 hlsearch = true,			-- Highlight all search matches
 incsearch = true,		    	-- Update search results after each character
 
-colorcolumn = "80",
+colorcolumn = "120",
 number = true,              		-- Show line numbers
 relativenumber = true,          -- Show relative line numbers
 
