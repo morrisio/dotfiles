@@ -22,7 +22,6 @@ local cmp_sources = {
     {name = 'nvim_lsp'},
     {name = 'buffer', keyword_length = 3},
     {name = 'luasnip', keyword_length = 2},
-    {name = 'cmp_tabnine'},
 }
 
 lsp.set_preferences({

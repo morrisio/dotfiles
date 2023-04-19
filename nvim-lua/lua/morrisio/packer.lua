@@ -19,9 +19,9 @@ return require('packer').startup(function()
     use 'morhetz/gruvbox'
     use 'ajmwagar/vim-deus'
     use 'preservim/vim-colors-pencil'
-    use 'chriskempson/base16-vim'
     use 'pgdouyon/vim-yin-yang'
     use 'cideM/yui'
+    use 'rainglow/vim'
 
     -- Navigators
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -51,7 +51,6 @@ return require('packer').startup(function()
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'},
             {'saadparwaiz1/cmp_luasnip'},
-            {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'},
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},
@@ -59,9 +58,6 @@ return require('packer').startup(function()
         }
     }
 
-    -- Tabnine
-    -- use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
-    --
     -- Golang
     use 'fatih/vim-go'
 

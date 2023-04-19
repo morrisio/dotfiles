@@ -1,4 +1,4 @@
-vim.cmd('colorscheme deus')
+vim.cmd('colorscheme glowfish-contrast')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
@@ -40,6 +40,7 @@ termguicolors = true,
 
 wrap = true,			    	-- Softwrap text
 linebreak = true,		    	-- Softwrap lines at word boundaries
+textwidth = 120,
 
 swapfile = false,                -- No swaps or backups
 backup = false,
