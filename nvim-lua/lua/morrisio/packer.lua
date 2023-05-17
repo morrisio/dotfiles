@@ -18,9 +18,9 @@ return require('packer').startup(function()
     -- Color schemes
     use 'morhetz/gruvbox'
     use 'ajmwagar/vim-deus'
-    use 'preservim/vim-colors-pencil'
     use 'pgdouyon/vim-yin-yang'
     use 'cideM/yui'
+    use 'folke/tokyonight.nvim'
     use 'rainglow/vim'
 
     -- Navigators
