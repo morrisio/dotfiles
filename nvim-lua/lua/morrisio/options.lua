@@ -1,4 +1,4 @@
-vim.cmd('colorscheme glowfish-contrast')
+vim.cmd('colorscheme yui')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
@@ -51,3 +51,5 @@ undofile = true,
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+vim.g.go_test_timeout = '30s'
