@@ -2,8 +2,10 @@
 vim.g.mapleader = " " 					        -- Use Space as the leader key
 
 -- Get rid of Escape
-vim.keymap.set("i", "fd", "<Esc>", {})	        -- Don't reach for Esc
-vim.keymap.set("t", "fd", "<c-\\><c-n>", {})    -- ... including in the terminal
+vim.keymap.set("i", "fd", "<Esc>", {})	        -- Don't reach for Esc in insert...
+vim.keymap.set("v", "fd", "<Esc>", {})	        -- ... visual...
+vim.keymap.set("c", "fd", "<C-C>", {})	        -- ... command...
+vim.keymap.set("t", "fd", "<c-\\><c-n>", {})    -- ... and the terminal.
 
 -- Move by visual line
 vim.keymap.set("n", "j", "gj", {})
