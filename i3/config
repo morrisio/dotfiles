@@ -23,6 +23,9 @@ font pango:monospace 10
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Start picom for transparency
+exec --no-startup-id picom &
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -35,7 +38,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 ## Configure display positioning
-exec --no-startup-id xrandr --output HDMI-0 --auto --left-of DP-4
+# exec --no-startup-id xrandr --output DP-4 --auto --scale 1.25x1.25 --right-of HDMI-0 --right-of DP-0
+exec --no-startup-id xrandr --output DP-2 --auto --right-of DP-4
 
 ## Initialize status bars
 exec --no-startup-id $HOME/.config/polybar/launch.sh
