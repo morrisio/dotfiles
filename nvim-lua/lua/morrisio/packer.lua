@@ -17,11 +17,11 @@ return require('packer').startup(function()
 
     -- Color schemes
     use 'morhetz/gruvbox'
-    use 'ajmwagar/vim-deus'
     use 'pgdouyon/vim-yin-yang'
     use 'cideM/yui'
-    use 'folke/tokyonight.nvim'
-    use 'rainglow/vim'
+    use 'Mofiqul/vscode.nvim'
+    use 'rose-pine/neovim'
+    use 'EdenEast/nightfox.nvim'
 
     -- Navigators
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }

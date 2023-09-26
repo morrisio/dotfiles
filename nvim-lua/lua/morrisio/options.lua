@@ -1,4 +1,5 @@
-vim.cmd('colorscheme yui')
+vim.cmd('set background=light')
+vim.cmd('colorscheme vscode')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
