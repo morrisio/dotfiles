@@ -39,7 +39,7 @@ exec --no-startup-id nm-applet
 
 ## Configure display positioning
 # exec --no-startup-id xrandr --output DP-4 --auto --scale 1.25x1.25 --right-of HDMI-0 --right-of DP-0
-exec --no-startup-id xrandr --output DP-2 --auto --right-of DP-4
+exec --no-startup-id xrandr --output DP-2 --auto --left-of DP-4
 
 ## Initialize status bars
 exec --no-startup-id $HOME/.config/polybar/launch.sh
@@ -61,7 +61,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym --release $mod+p exec gnome-screenshot -a
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+floating_modifier Mod4
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
