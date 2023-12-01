@@ -2,7 +2,16 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- Basics
-    use 'scrooloose/nerdtree'
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim"
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        }
+    }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -15,13 +24,17 @@ return require('packer').startup(function()
     }
     use 'kyazdani42/nvim-web-devicons'
 
+    -- Copilot
+    use 'github/copilot.vim'
+
     -- Color schemes
     use 'morhetz/gruvbox'
     use 'pgdouyon/vim-yin-yang'
     use 'cideM/yui'
     use 'Mofiqul/vscode.nvim'
     use 'rose-pine/neovim'
-    use 'EdenEast/nightfox.nvim'
+    use 'catppuccin/nvim'
+    use 'folke/tokyonight.nvim'
 
     -- Navigators
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -31,6 +44,7 @@ return require('packer').startup(function()
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/playground'
     use {'ggandor/leap.nvim'}
+    use {'stevearc/aerial.nvim'}
 
     -- LSP/completion
     use {

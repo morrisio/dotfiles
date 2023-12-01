@@ -1,5 +1,5 @@
-vim.cmd('set background=light')
-vim.cmd('colorscheme vscode')
+vim.cmd('set background=dark')
+vim.cmd('colorscheme rose-pine')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
@@ -20,7 +20,7 @@ hidden = true,			    	-- Abandoned buffers are hidden rather than deleted
 hlsearch = true,			-- Highlight all search matches
 incsearch = true,		    	-- Update search results after each character
 
-colorcolumn = "120",
+colorcolumn = "100",
 number = true,              		-- Show line numbers
 relativenumber = true,          -- Show relative line numbers
 
@@ -41,7 +41,7 @@ termguicolors = true,
 
 wrap = true,			    	-- Softwrap text
 linebreak = true,		    	-- Softwrap lines at word boundaries
-textwidth = 120,
+textwidth = 100,
 
 swapfile = false,                -- No swaps or backups
 backup = false,
