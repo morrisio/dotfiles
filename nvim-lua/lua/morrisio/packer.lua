@@ -17,7 +17,6 @@ return require('packer').startup(function()
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use 'tpope/vim-fugitive'
-    use 'preservim/vim-pencil'
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
@@ -33,8 +32,6 @@ return require('packer').startup(function()
     use 'cideM/yui'
     use 'Mofiqul/vscode.nvim'
     use 'rose-pine/neovim'
-    use 'catppuccin/nvim'
-    use 'folke/tokyonight.nvim'
 
     -- Navigators
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -71,6 +68,10 @@ return require('packer').startup(function()
             {'rafamadriz/friendly-snippets'},
         }
     }
+
+    -- Debugger
+    use 'mfussenegger/nvim-dap'
+    use 'leoluz/nvim-dap-go'
 
     -- Golang
     use 'fatih/vim-go'

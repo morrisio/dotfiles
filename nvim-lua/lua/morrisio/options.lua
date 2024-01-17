@@ -1,5 +1,5 @@
 vim.cmd('set background=dark')
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme gruvbox')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard

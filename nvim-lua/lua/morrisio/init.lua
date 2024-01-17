@@ -1,4 +1,6 @@
 require "morrisio.aerial"
+require "morrisio.copilot"
+require "morrisio.dap-go"
 require "morrisio.keymaps"
 require "morrisio.leap"
 require "morrisio.lualine"
