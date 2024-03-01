@@ -1,37 +1,57 @@
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    "gopls",
-    "lua_ls",
-    "rust_analyzer",
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {'gopls', 'lua_ls'},
+  handlers = {
+    lsp.default_setup,
+    lua_ls = function()
+      local lua_opts = lsp.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
+    end,
+  },
 })
 
 local cmp = require('cmp')
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings({
+
+cmp.setup({
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      end,
+    },
+    window = {
+      -- completion = cmp.config.window.bordered(),
+      -- documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     ['<CR>'] = cmp.config.disable, -- Don't select on Enter
     ['<Tab>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete(),
-})
-
-local cmp_sources = {
-    {name = 'path'},
-    {name = 'nvim_lsp'},
-    {name = 'buffer', keyword_length = 3},
-    {name = 'luasnip', keyword_length = 2},
-}
+    }),
+    sources = cmp.config.sources({
+        {name = 'path'},
+        {name = 'nvim_lsp'},
+        {name = 'buffer', keyword_length = 3},
+        {name = 'luasnip', keyword_length = 2},
+    },
+    {
+      { name = 'buffer' },
+    })
+  })
 
 lsp.set_preferences({
     sign_icons = {}
-})
-
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings,
-    sources = cmp_sources
 })
 
 lsp.on_attach(function(client, bufnr)

@@ -1,31 +1,31 @@
 vim.cmd('set background=dark')
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme glowfish')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
-	cmdheight = 2,			-- Higher command line
-	completeopt = {             	-- Make complete menu behave like VS
-	"menuone", "preview", "longest" 
+	cmdheight = 2,			    -- Higher command line
+	completeopt = {             -- Make complete menu behave like VS
+	"menuone", "preview", "longest"
 },
 cursorline = true,		    	-- Highlight current line
 fileencoding = "utf-8",			-- Save as UTF-8
 updatetime = 100,		    	-- Faster completion
-wildmenu = true,			-- Enhanced commandline completion
+wildmenu = true,			    -- Enhanced commandline completion
 
-foldexpr = "nvim_treesitter#foldexpr()",		-- Use Treesitter for folding
-foldlevelstart = 20,        		-- Open files unfolded
+foldexpr = "nvim_treesitter#foldexpr()",-- Use Treesitter for folding
+foldlevelstart = 20,        	-- Open files unfolded
 foldmethod = "expr",			-- Use Treesitter for folding
 hidden = true,			    	-- Abandoned buffers are hidden rather than deleted
 
-hlsearch = true,			-- Highlight all search matches
+hlsearch = true,			    -- Highlight all search matches
 incsearch = true,		    	-- Update search results after each character
 
 colorcolumn = "100",
-number = true,              		-- Show line numbers
+number = true,              	-- Show line numbers
 relativenumber = true,          -- Show relative line numbers
 
-scrolloff = 8,              		-- Scroll this number of lines from top/bottom
-showcmd = true,             		-- Show command at the bottom
+scrolloff = 8,                  -- Scroll this number of lines from top/bottom
+showcmd = true,             	-- Show command at the bottom
 signcolumn = "yes",		    	-- Always show the sign column (for breakpoints, linters)
 ignorecase = true,		    	-- Ignore case when searching by default (but see below)
 smartcase = true,		    	-- Switch to case sensitive if search patter contains uppercase chars
@@ -43,7 +43,7 @@ wrap = true,			    	-- Softwrap text
 linebreak = true,		    	-- Softwrap lines at word boundaries
 textwidth = 100,
 
-swapfile = false,                -- No swaps or backups
+swapfile = false,               -- No swaps or backups
 backup = false,
 undodir = os.getenv("HOME") .. "/.vim/undodir",
 undofile = true,

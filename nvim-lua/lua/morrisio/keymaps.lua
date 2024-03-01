@@ -1,6 +1,3 @@
--- Leader
-vim.g.mapleader = " " 					        -- Use Space as the leader key
-
 -- Get rid of Escape
 vim.keymap.set("i", "fd", "<Esc>", {})	        -- Don't reach for Esc in insert...
 vim.keymap.set("v", "fd", "<Esc>", {})	        -- ... visual...
