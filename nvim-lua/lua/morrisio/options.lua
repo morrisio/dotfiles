@@ -1,5 +1,5 @@
 vim.cmd('set background=dark')
-vim.cmd('colorscheme glowfish')
+vim.cmd('colorscheme yui')
 
 local options = {
 	clipboard = "unnamedplus", 	-- Use system clipboard
