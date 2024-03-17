@@ -65,4 +65,7 @@ return require('lazy').setup({
 
     -- Copilot
     'github/copilot.vim',
+
+    -- Golang
+    'fatih/vim-go',
 })
