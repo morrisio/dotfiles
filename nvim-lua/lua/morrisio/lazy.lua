@@ -37,31 +37,22 @@ return require('lazy').setup({
     'nvim-treesitter/playground',
     'ggandor/leap.nvim',
 
-    -- LSP/completion
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+    -- LSP management
+    'neovim/nvim-lspconfig',
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'hrsh7th/cmp-cmdline'},
-            {'hrsh7th/cmp-nvim-lsp-signature-help'},
-            {'hrsh7th/cmp-nvim-lsp-document-symbol'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
-            {'saadparwaiz1/cmp_luasnip'},
+    -- Autocompletion
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-nvim-lsp-document-symbol',
+    'hrsh7th/cmp-nvim-lua',
+    'saadparwaiz1/cmp_luasnip',
 
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-        }
-    },
+    -- Snippets
+    'L3MON4D3/LuaSnip',
 
     -- Copilot
     'github/copilot.vim',
