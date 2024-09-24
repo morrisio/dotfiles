@@ -20,6 +20,7 @@ opt.signcolumn = "yes"
 
 -- Help keep lines to 100 chars or less
 opt.colorcolumn = "100"
+opt.textwidth = 100
 
 -- Sync clipboard between OS and Neovim.
 opt.clipboard = "unnamedplus"
