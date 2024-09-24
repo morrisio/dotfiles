@@ -102,7 +102,7 @@ return {
 
 					vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
-					vim.keymap.set("i", "<C-k>", vim.lsp.buf.hover)
+					vim.keymap.set("i", "<c-k>", vim.lsp.buf.signature_help)
 
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
 					vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
