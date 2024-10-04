@@ -51,10 +51,13 @@ return {
 					},
 				},
 				lua_ls = true,
-
-				-- Probably want to disable formatting for this lang server
 				tsserver = true,
 				clangd = true,
+				gdscript = {
+					name = "godot",
+					cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+					manual_install = true,
+				},
 			}
 
 			local servers_to_install = vim.tbl_filter(function(key)
