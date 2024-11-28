@@ -52,7 +52,6 @@ return {
 				},
 				lua_ls = true,
 				tsserver = true,
-				clangd = true,
 				gdscript = {
 					name = "godot",
 					cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
@@ -76,7 +75,6 @@ return {
 				"lua_ls",
 				"delve",
 				"gopls",
-				"clangd",
 			}
 
 			vim.list_extend(ensure_installed, servers_to_install)
