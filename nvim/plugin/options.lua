@@ -52,3 +52,7 @@ opt.hlsearch = true
 
 -- Don't show the mode, since it's already in the status line
 opt.showmode = false
+
+-- Show tabs and spaces
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
