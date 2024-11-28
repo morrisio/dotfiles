@@ -1,1 +1,2 @@
-vim.cmd.colorscheme("catppuccin")
+vim.opt.background = "dark"
+vim.cmd.colorscheme("gruvbox-material")
