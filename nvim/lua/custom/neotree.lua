@@ -8,6 +8,7 @@ require("neo-tree").setup({
 			end,
 		},
 	},
+	use_popups_for_input = false,
 	window = {
 		mappings = {
 			["c"] = {
