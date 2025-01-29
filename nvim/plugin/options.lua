@@ -42,10 +42,10 @@ opt.softtabstop = 4
 opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-opt.scrolloff = 2
+opt.scrolloff = 6
 
 -- Number of lines to scroll when using ctrl-u and ctrl-d
-opt.scroll = 16
+opt.scroll = 10
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 opt.hlsearch = true
