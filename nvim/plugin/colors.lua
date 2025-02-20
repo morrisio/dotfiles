@@ -1,2 +1,3 @@
-vim.opt.background = "light"
-vim.cmd.colorscheme("yui")
+vim.opt.background = "dark"
+vim.opt.termguicolors = true
+vim.cmd.colorscheme("gruvbox-material")
