@@ -5,4 +5,6 @@ return {
 	"rose-pine/neovim",
 	"navarasu/onedark.nvim",
 	"Mofiqul/vscode.nvim",
+	"savq/melange-nvim",
+	"folke/tokyonight.nvim",
 }
