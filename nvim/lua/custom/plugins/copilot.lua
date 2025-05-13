@@ -2,7 +2,7 @@ return {
 	{
 		"github/copilot.vim",
 		config = function()
-			require("custom.copilot")
+			require("custom.configs.copilot")
 		end,
 	},
 }

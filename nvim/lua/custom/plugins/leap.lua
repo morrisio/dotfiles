@@ -1,6 +1,6 @@
 return {
 	"ggandor/leap.nvim",
 	config = function()
-		require("custom.leap")
+		require("custom.configs.leap")
 	end,
 }

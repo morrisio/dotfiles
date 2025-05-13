@@ -51,12 +51,8 @@ return {
 					},
 				},
 				lua_ls = true,
-				tsserver = true,
-				gdscript = {
-					name = "godot",
-					cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
-					manual_install = true,
-				},
+				pyright = true,
+				clangd = true,
 			}
 
 			local servers_to_install = vim.tbl_filter(function(key)
