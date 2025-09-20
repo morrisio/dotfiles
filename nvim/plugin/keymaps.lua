@@ -27,13 +27,12 @@ set("n", "<leader><s-l>", "<c-w>L", { desc = "Move window right" })
 set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Control the size of splits (height/width)
--- ToDo: Overlaps with i3
-set("n", "<M-,>", "<c-w>5<")
-set("n", "<M-.>", "<c-w>5>")
-set("n", "<M-t>", "<C-W>+")
-set("n", "<M-s>", "<C-W>-")
+-- Caution: Overlaps with i3
+set("n", "<leader>-", "<c-w>5<", { desc = "Increase horizontal size by 5" })
+set("n", "<leader>+", "<c-w>5>", { desc = "Decrease horizontal size by 5" })
+set("n", "<leader>,", "<C-W>+", { desc = "Increase vertical size" })
+set("n", "<leader>.", "<C-W>-", { desc = "Descrease vertical size" })
 
-set("n", "<leader>dp", vim.diagnostic.goto_prev)
-set("n", "<leader>dn", vim.diagnostic.goto_next)
-set("n", "<leader>dl", vim.diagnostic.open_float)
-set("n", "<leader>dq", vim.diagnostic.setqflist)
+set("n", "<leader>dp", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+set("n", "<leader>dq", vim.diagnostic.setqflist, { desc = "Open diagnostics list" })
