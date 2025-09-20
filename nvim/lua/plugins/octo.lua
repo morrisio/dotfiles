@@ -7,7 +7,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
-			require("custom.configs.octo")
+			require("plugins.configs.octo")
 		end,
 	},
 }

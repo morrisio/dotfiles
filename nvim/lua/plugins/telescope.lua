@@ -8,7 +8,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
-			require("custom.configs.telescope")
+			require("plugins.configs.telescope")
 		end,
 	},
 }

@@ -5,6 +5,6 @@ return {
 		"Bilal2453/luvit-meta",
 	},
 	config = function()
-		require("custom.configs.lazydev")
+		require("plugins.configs.lazydev")
 	end,
 }

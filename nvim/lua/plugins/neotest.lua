@@ -8,6 +8,6 @@ return {
 		"fredrikaverpil/neotest-golang",
 	},
 	config = function()
-		require("custom.configs.neotest")
+		require("plugins.configs.neotest")
 	end,
 }

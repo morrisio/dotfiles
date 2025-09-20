@@ -5,7 +5,7 @@ return {
 		branch = "master",
 		lazy = false,
 		config = function()
-			require("custom.configs.treesitter")
+			require("plugins.configs.treesitter")
 		end,
 	},
 }

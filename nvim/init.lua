@@ -13,7 +13,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- Init lazy to load `lua/plugins`
-require("lazy").setup({ import = "custom/plugins" }, {
+require("lazy").setup({ import = "plugins" }, {
 	change_detection = {
 		notify = false,
 	},

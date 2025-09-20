@@ -10,7 +10,7 @@ return {
 			"stevearc/conform.nvim",
 		},
 		config = function()
-			require("custom.configs.lsp")
+			require("plugins.configs.lsp")
 		end,
 	},
 }
