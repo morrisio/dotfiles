@@ -1,6 +1,6 @@
 local opt = vim.opt
 
--- Preview substitutions live, as you type!
+-- Preview substitutions live
 opt.inccommand = "split"
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -18,15 +18,15 @@ opt.splitbelow = true
 -- Keep signcolumn on by default
 opt.signcolumn = "yes"
 
--- Help keep lines to 100 chars or less
-opt.colorcolumn = "100"
-opt.textwidth = 100
+-- Help keep lines to 120 chars or less
+opt.colorcolumn = "120"
+opt.textwidth = 120
 
 -- Sync clipboard between OS and Neovim.
 opt.clipboard = "unnamedplus"
 -- ToDo: Add mappings for <Space>y and <Space>p instead?
 
--- Don't have `o` add a comment
+-- Prevent `o` from adding a comment
 opt.formatoptions:remove("o")
 
 -- Wrapped lines maintain indentation
