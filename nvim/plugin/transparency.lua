@@ -1,4 +1,4 @@
-local transparent = false
+local transparent = true
 
 if transparent then
 	vim.cmd.hi("Normal guibg=NONE ctermbg=NONE")

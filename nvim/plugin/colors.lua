@@ -1,3 +1,3 @@
 vim.opt.termguicolors = true
-vim.opt.background = "light"
-vim.cmd.colorscheme("vscode")
+vim.opt.background = "dark"
+vim.cmd.colorscheme("catppuccin")
