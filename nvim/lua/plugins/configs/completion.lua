@@ -6,6 +6,10 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "buffer" },
 	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 	mapping = {
 		["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -18,7 +22,7 @@ cmp.setup({
 		),
 	},
 
-	-- Enable luasnip to handle snippet expansion for nvim-cmp
+	-- Enable native snippets to handle snippet expansion for nvim-cmp
 	snippet = {
 		expand = function(args)
 			vim.snippet.expand(args.body)
