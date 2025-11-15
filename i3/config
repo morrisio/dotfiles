@@ -135,7 +135,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # restore screen layout and randomize wallpapers
-bindsym $mod+Shift+w exec --no-startup-id /home/morris/.screenlayout/2-headed.sh && feh --bg-fill --randomize /home/morris/Pictures/Wallpapers/
+bindsym $mod+Shift+w exec --no-startup-id /home/morris/.screenlayout/3-headed-daisy.sh && feh --bg-fill --randomize /home/morris/Pictures/Wallpapers/
 
 # keybinding in fancy rofi (automated):
 bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
@@ -251,12 +251,15 @@ set $ws10 "10"
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-workspace $ws1 output DP-4
-workspace $ws2 output DP-4
-workspace $ws3 output DP-4
-workspace $ws4 output HDMI-0
-workspace $ws5 output HDMI-0
-workspace $ws6 output HDMI-0
+workspace $ws1 output DP-2.8
+workspace $ws2 output DP-2.8
+workspace $ws3 output DP-2.8
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
+workspace $ws6 output DP-0
+workspace $ws7 output DP-4
+workspace $ws8 output DP-4
+workspace $ws8 output DP-4
 
 # bind program to workspace and focus to them on startup:
 #assign [class="TelegramDesktop"] $ws5
@@ -322,7 +325,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id /home/morris/.screenlayout/2-headed.sh
+exec --no-startup-id /home/morris/.screenlayout/3-headed-daisy.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
