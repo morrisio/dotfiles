@@ -33,11 +33,9 @@ set("n", "<leader>+", "<c-w>5>", { desc = "Decrease horizontal size by 5" })
 set("n", "<leader>,", "<C-W>+", { desc = "Increase vertical size" })
 set("n", "<leader>.", "<C-W>-", { desc = "Descrease vertical size" })
 
-set("n", "<leader>dp", function()
-	vim.diagnostic.jump({ count = -1 })
-end, { desc = "Go to previous diagnostic" })
-
-set("n", "<leader>dn", function()
-	vim.diagnostic.jump({ count = 1 })
-end, { desc = "Go to next diagnostic" })
-set("n", "<leader>dq", vim.diagnostic.setqflist, { desc = "Open diagnostics list" })
+set(
+	"n",
+	"<Leader>fr",
+	":lua CopyRelativePathToClipboard()<CR>",
+	{ noremap = true, silent = true, desc = "Copy Relative Path to Clipboard" }
+)
