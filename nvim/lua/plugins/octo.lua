@@ -1,13 +1,17 @@
+local function config()
+	local octo = require("octo")
+
+	octo.setup()
+end
+
 return {
 	{
 		"pwntester/octo.nvim",
-		requires = {
+		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = function()
-			require("plugins.configs.octo")
-		end,
+		config = config,
 	},
 }

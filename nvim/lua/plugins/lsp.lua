@@ -17,7 +17,7 @@ local function config()
 			},
 		},
 	})
-    vim.lsp.enable('gopls')
+	vim.lsp.enable("gopls")
 
 	vim.lsp.enable("lua_ls")
 	vim.lsp.enable("stylua")
@@ -66,10 +66,10 @@ local function config()
 end
 
 return {
-		"neovim/nvim-lspconfig",
-    dependencies = {
+	"neovim/nvim-lspconfig",
+	dependencies = {
 		-- Autoformatting
 		"stevearc/conform.nvim",
-    },
+	},
 	config = config,
 }
