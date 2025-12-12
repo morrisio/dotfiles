@@ -1,5 +1,17 @@
 local opt = vim.opt
 
+-- Reload changed files (unless they have pending local changes)
+opt.autoread = true
+
+-- Check for external file changes on buffer enter and focus gained.
+local augroup = vim.api.nvim_create_augroup("ReloadExternalChanges", { clear = true })
+vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained" }, {
+	group = augroup,
+	callback = function()
+		vim.cmd("checktime")
+	end,
+	desc = "Force checktime on focus/buffer switch to reload external changes",
+})
 -- Preview substitutions live
 opt.inccommand = "split"
 
